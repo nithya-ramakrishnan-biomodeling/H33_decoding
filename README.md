@@ -39,7 +39,8 @@ Ensure you have the following installed:
 - joblib
 - samtools
 - bedtools
-
+- sratoolkit
+- Nucpossimulator: [NucPos Quick Start Guide](https://bioinformatics.hochschule-stralsund.de/nucpos/quick_start.html)
 ## Usage
 ### Running the Simulation
 To generate simulated data and decode sequences, run:
