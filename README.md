@@ -43,7 +43,14 @@ Ensure you have the following installed:
 - Nucpossimulator: [NucPos Quick Start Guide](https://bioinformatics.hochschule-stralsund.de/nucpos/quick_start.html)
 ## Usage
 ### Running the Simulation
-To generate simulated data and decode sequences, run:
+
+- Variant_sim.py contains the core logic for simulating genetic variants. It likely includes functions to create simulated sequences, apply H3.3 decoding and viterbi decoding, and evaluate the effects of different variant configurations. This script is usually used in tandem with Run_variant_sim.py and may handle the4 details of the simulation, including randomization, mutation generation logic.
+- Run_variant_sim.py is the main driver script for running simulations involving variants. It orchestrates the setup of simulations based on variant data, performs the necessary computations, and outputs the results.
+- k_threshold.py defines the logic for calculating and applying thresholds related to the k filling procedure. It likely includes functions that calculate the threshold values, check sequence data against these thresholds, and trigger certain actions if the data meets or exceeds the threshold. This script may also be used for tuning or configuring the threshold parameters before running the simulation or fill process.
+- k6_fill.py: The k6_fill.py file contains the k fill algorithm itself. This script is responsible for implementing the logic to fill or correct sequences based on the k=6 criteria.
+- Run_k6_fill.py: This script is responsible for running the k6 fill or k-threshold procedure. It processes sequences or data, applies k corrections, and outputs the results. It may include functionality for configuring parameters such as alpha, beta, and other constants necessary for the k filling algorithm. This script acts as the entry point for initializing and executing the k6 fill process in the workflow.
+
+To generate simulated data and decode sequences using **Viterbi**, run:
 ```bash
 python3 run_variant_sim.py \
   --batch_name "TestBatch" \
@@ -58,6 +65,16 @@ python3 run_variant_sim.py \
   --n_samples 10 \
   --seq_length 100 \
   --verbose_level 5
+```
+To generate simulated data and decode sequences using **k-fill**, run: dependeing on threshold or k=6 change the method name: "k6_fill" or "k_threshold"
+python3 run_variant_sim.py \
+  --sim_id test \
+  --seed 42 \
+  --rho 0.2 \
+  --n_samples 100 \
+  --seq_length 100 \
+  --verbose 2 
+  --method k_threshold
 ```
 
 ### Processing Experimental Data
