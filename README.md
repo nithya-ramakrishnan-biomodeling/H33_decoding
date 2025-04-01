@@ -61,17 +61,17 @@ python3 run_variant_sim.py \
 
 ### Processing Experimental Data
 The scripts in experimental data validations are numbered just have to follow along.
-**Number 0:** PDF with guide to download and process data to .bed format.
-**Number 1:** Subsetting the bed files into 5mb regions and running **Nucpossimulator**.
-**Number 2:** Descretising the nuspossimulator output and rounding off to 200.
-**Number 3:** Combining both H3.1 and H3.3, descretised files.
-**Number 4:** Correcting invalid rows based on random number generation or referring to nuspossimulator result.bed.
-**Number 5:** Median filtering (which is optional step)
-**Number 6:** Conflict resolve check the invalid and update based on max appeared value in that window.
-**Number 7:** Generating source- seq with information of if the nucleosome is H3.1 or H3.3.
-**Number 8:** Calculating probability values, mu1 and mu2.
-**Number 9:** Filtering source as per mu1, mu2 values.
-**Number 10:** Experimental validation- generating mother as per source and running algorithm.
+- **Number 0:** PDF with guide to download and process data to .bed format.
+- **Number 1:** Subsetting the bed files into 5mb regions and running **Nucpossimulator**.
+- **Number 2:** Descretising the nuspossimulator output and rounding off to 200.
+- **Number 3:** Combining both H3.1 and H3.3, descretised files.
+- **Number 4:** Correcting invalid rows based on random number generation or referring to nuspossimulator result.bed.
+- **Number 5:** Median filtering (which is optional step)
+- **Number 6:** Conflict resolve check the invalid and update based on max appeared value in that window.
+- **Number 7:** Generating source- seq with information of if the nucleosome is H3.1 or H3.3.
+- **Number 8:** Calculating probability values, mu1 and mu2.
+- **Number 9:** Filtering source as per mu1, mu2 values.
+- **Number 10:** Experimental validation- generating mother as per source and running algorithm.
 
 ## Output Files
 - **Filtered Sequences:** Processed and filtered sequences based on probabilistic modeling.
