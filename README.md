@@ -65,8 +65,9 @@ python3 run_variant_sim.py \
   --n_samples 10 \
   --seq_length 100 \
   --verbose_level 5
-```
+
 To generate simulated data and decode sequences using **k-fill**, run: dependeing on threshold or k=6 change the method name: "k6_fill" or "k_threshold"
+```bash
 python3 run_variant_sim.py \
   --sim_id test \
   --seed 42 \
