@@ -92,6 +92,7 @@ The scripts in experimental data validations are numbered just have to follow al
 - **Number 8:** Calculating probability values, mu1 and mu2.
 - **Number 9:** Filtering source as per mu1, mu2 values.
 - **Number 10:** Experimental validation- generating mother as per source and running algorithm.
+- Violin_plot.py: for plotting grouped mu BER distribution.
 
 ## Output Files
 - **Filtered Sequences:** Processed and filtered sequences based on probabilistic modeling.
